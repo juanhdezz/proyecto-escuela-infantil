@@ -1,0 +1,280 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout 
+  title="Sobre nosotros" 
+  description="Descubre más sobre nosotros."
+>
+  <Hero 
+    title="Sobre nosotros"
+    subtitle="Nuestra historia, mision y valores"
+    image="https://images.pexels.com/photos/8613228/pexels-photo-8613228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    imageAlt="School facade with children playing"
+    height="medium"
+  />
+
+  <!-- Our Story Section -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="section-heading text-left">
+            <h2>Our Story</h2>
+          </div>
+          <p class="text-lg mb-4">
+            La Escuela Infantil "Virgen de Loreto" es un centro público situado en el distrito Zaidín de Granada, dependiente de la Consejería de Educación de la Junta de Andalucía. Su origen se remonta a una etapa como escuela privada de la Congregación de las Damas Apostólicas. 
+          </p>
+          <p class="text-lg mb-4">
+            En 1988 pasó a ser gestionada por la Junta de Andalucía. En 1993 se derribó el antiguo edificio por problemas estructurales y durante la reconstrucción funcionó en el colegio "28 de Febrero". La nueva escuela fue inaugurada oficialmente en junio del año 2000.
+
+          </p>
+          <p class="text-lg">
+            A lo largo de nuestro crecimiento hemos mantenido nuestro compromiso de ofrecer una atención personalizada y educación de calidad. Nuestro objetivo es acompañar en la etapa más importante del niño o niña y ayudar a estos a alcanzar nuevas metas en su trayectoria educativa y sobre todo hacerlos crecer como personas y como niños y niñas.
+
+
+          </p>
+        </div>
+        <div class="relative">
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-secondary-200 rounded-full z-0"></div>
+          <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-accent-200 rounded-full z-0"></div>
+          <img 
+            src="https://images.pexels.com/photos/8613184/pexels-photo-8613184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Nursery classroom" 
+            class="rounded-lg shadow-xl relative z-10"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="py-16 bg-primary-50">
+    <div class="container-custom">
+      <div class="section-heading">
+        <h2>Nuestra misión y valores
+        </h2>
+      </div>
+      
+      <div class="max-w-3xl mx-auto mb-12 text-center">
+        <p class="text-xl font-medium text-primary-800 mb-6">
+          Brindar un entorno enriquecedor que despierte el amor por el aprendizaje y apoye el camino único de crecimiento y descubrimiento de cada niño.        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="paper-bg p-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+          <div class="h-16 w-16 rounded-full bg-primary-100 flex items-center justify-center mb-4">
+            <span class="text-3xl" aria-hidden="true">❤️</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Cuidado</h3>
+          <p>Creamos un ambiente cálido y amoroso donde los niños se sienten seguros, valorados y respetados. Nuestro enfoque se centra en construir relaciones sólidas con cada niño.
+          </p>
+        </div>
+        
+        <div class="paper-bg p-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+          <div class="h-16 w-16 rounded-full bg-secondary-100 flex items-center justify-center mb-4">
+            <span class="text-3xl" aria-hidden="true">✨</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Descubrimiento</h3>
+          <p>Fomentamos la curiosidad y alentamos la exploración, brindando experiencias enriquecedoras que estimulan el deseo natural de los niños de comprender el mundo que los rodea.</p>
+        </div>
+        
+        <div class="paper-bg p-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+          <div class="h-16 w-16 rounded-full bg-accent-100 flex items-center justify-center mb-4">
+            <span class="text-3xl" aria-hidden="true">🌱</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Crecimiento</h3>
+          <p>Creemos en nutrir al niño en su totalidad: intelectual, social, emocional y físicamente, brindándole oportunidades para su desarrollo en todas las áreas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="section-heading">
+        <h2>Nuestro enfoque educativo</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <img 
+            src="https://images.pexels.com/photos/8612927/pexels-photo-8612927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Children learning through play" 
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+        
+        <div class="order-1 lg:order-2">
+          <h3 class="text-2xl font-semibold mb-4">Aprender a través del juego</h3>
+          <p class="mb-4">
+            En este proyecto que os vamos a presentar queremos transmitir que los niños y niñas  aprenden jugando y que queremos crear actividades donde los niños puedan explorar, imaginar y disfrutar mediante el juego. 
+Aprendiendo a través del juego se puede definir como una herramienta esencial donde los niños y niñas utilizan con la finalidad de divertirse y disfrutar donde también se abre un canal de aprendizaje directo donde cada niño y niña adquieren muchos conocimientos y ejercitan sus habilidades psicomotrices, el conocerse a sí mismo, valores, la socialización.
+En Virgen de Loreto, creemos que el juego es la forma natural en que los niños aprenden. Nuestro currículo está diseñado en torno a experiencias de juego con propósito que desarrollan:
+
+          </p>
+          
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Conocerse a sí mismo y a su propio cuerpo</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Adquirir autonomía en sus actividades habituales</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Desarrollar sus capacidades emocionales afectivas</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Resolución de problemas y relacionarse con los demás en igualdad y en un ambiente de convivencia y respeto</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Desarrollar habilidades comunicativas en diferentes lenguaje y formas de expresión</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Iniciarse en el movimiento, el gesto, el ritmo y en las habilidades lógico matemáticas
+              </span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Fomentar la creatividad y la imaginación 
+
+              </span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Desarrollar la  exploración y la manipulación 
+              </span>
+            </li>
+          </ul>
+            
+          
+          <p>
+            Nuestros maestros observan y amplían el juego de los niños, brindándoles orientación y recursos para profundizar el aprendizaje, manteniendo la alegría del descubrimiento.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="py-16 bg-secondary-50">
+    <div class="container-custom">
+      <div class="section-heading">
+        <h2>Conozca a nuestro equipo
+        </h2>
+        <p class="text-lg max-w-3xl mx-auto text-center mb-12">
+          Nuestro dedicado equipo de educadores aporta pasión, experiencia y calidez a cada interacción con su hijo. Esto tal cual
+
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Teacher 1 -->
+        <div class="paper-bg overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-lg group">
+          <div class="aspect-w-1 aspect-h-1 relative overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              alt="Maria Gonzalez, Director" 
+              class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-1">Laura Lopez Pérez</h3>
+            <p class="text-primary-600 font-medium mb-3">Directora y fundadora
+            </p>
+            <p class="text-gray-600">
+              Con más de 30 años de experiencia en la educación infantil. Su visiòn y liderazgo de Inma han forjado el éxito de nuestra escuela
+            </p>
+          </div>
+        </div>
+        
+        <!-- Teacher 2 -->
+        <div class="paper-bg overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-lg group">
+          <div class="aspect-w-1 aspect-h-1 relative overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/3783359/pexels-photo-3783359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              alt="Carlos Medina, Lead Teacher" 
+              class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-1">Paula Fernández Ordóñez
+            </h3>
+            <p class="text-primary-600 font-medium mb-3">Técnico de educación infantil 
+            </p>
+            <p class="text-gray-600">
+              Apasionada por los niños y niñas, amable, cariñosa y con su visión de la educación y de la etapa de la infancia nos ha traído a nuestra escuela un ambiente enriquecedor para nuestros niños y niñas más pequeños. 
+
+            </p>
+          </div>
+        </div>
+        
+        <!-- Teacher 3 -->
+        <div class="paper-bg overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-lg group">
+          <div class="aspect-w-1 aspect-h-1 relative overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/5212331/pexels-photo-5212331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              alt="Sofia Lopez, Early Years Specialist" 
+              class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-1">Sofia Lopez</h3>
+            <p class="text-primary-600 font-medium mb-3">Técnico de educación infantil
+            </p>
+            <p class="text-gray-600">
+              Su entrega al bienestar de los niños y niñas, cercana y con una mirada única sobre la enseñanza y el desarrollo infantil ha contribuido a llenar nuestro centro en un espacio lleno de calidez y estímulos para los niños y niñas más pequeños.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <p class="text-lg mb-6">
+          Nuestro equipo incluye también personal de limpieza, de cocina y de apoyo que trabajan para crear una comunidad de bienestar y de enriquecimiento.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- CTA -->
+  <section class="py-12 bg-primary-800 text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-display text-white mb-6">¿Preparado para visitar nuestra escuela?</h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8 text-primary-100">
+        Estaremos encantados de recibir a su familia y mostrarle nuestras instalaciones, nuestro equipo y nuestras actividades.
+      </p>
+      <a href="/contact" class="btn bg-white text-primary-800 hover:bg-gray-100">
+        Contactanos
+      </a>
+    </div>
+  </section>
+</Layout>

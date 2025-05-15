@@ -1,0 +1,425 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+
+// Activity data
+const activities = [
+  {
+    id: "art",
+    title: "Art & Crafts",
+    description: "Creative expression through a variety of mediums helps children develop fine motor skills, explore their imagination, and learn about different materials and techniques.",
+    image: "https://images.pexels.com/photos/8612929/pexels-photo-8612929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: [
+      "Painting with various tools and techniques",
+      "Clay modeling and sculpture",
+      "Collage and paper crafts",
+      "Drawing and illustration",
+      "Seasonal and cultural art projects"
+    ]
+  },
+  {
+    id: "literacy",
+    title: "Early Literacy",
+    description: "Building a strong foundation in language and literacy through engaging activities that make learning to read and write a joyful experience.",
+    image: "https://images.pexels.com/photos/8535214/pexels-photo-8535214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: [
+      "Storytime and read-alouds",
+      "Alphabet recognition and phonics",
+      "Dramatic storytelling and puppet shows",
+      "Early writing experiences",
+      "Print-rich environment exploration"
+    ]
+  },
+  {
+    id: "music",
+    title: "Music & Movement",
+    description: "Rhythm, melody, and movement activities that develop coordination, listening skills, and self-expression while fostering a love of music.",
+    image: "https://images.pexels.com/photos/8535230/pexels-photo-8535230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: [
+      "Singing and vocal play",
+      "Instrument exploration",
+      "Dance and creative movement",
+      "Rhythm games and activities",
+      "Musical storytelling"
+    ]
+  },
+  {
+    id: "outdoor",
+    title: "Outdoor Play",
+    description: "Time in our outdoor spaces allows children to connect with nature, develop gross motor skills, and engage in collaborative play in a different environment.",
+    image: "https://images.pexels.com/photos/296301/pexels-photo-296301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: [
+      "Nature exploration and gardening",
+      "Playground equipment activities",
+      "Ball games and coordination exercises",
+      "Outdoor art and science",
+      "Seasonal outdoor experiences"
+    ]
+  },
+  {
+    id: "math",
+    title: "Early Mathematics",
+    description: "Hands-on activities that build number sense, pattern recognition, measurement skills, and logical thinking in meaningful contexts.",
+    image: "https://images.pexels.com/photos/8535220/pexels-photo-8535220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: [
+      "Counting and number recognition",
+      "Sorting and classifying",
+      "Shape recognition and geometry",
+      "Measurement activities",
+      "Pattern creation and recognition"
+    ]
+  },
+  {
+    id: "science",
+    title: "Science Discovery",
+    description: "Exploration-based activities that nurture children's natural curiosity about the world and develop scientific thinking skills.",
+    image: "https://images.pexels.com/photos/8535227/pexels-photo-8535227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: [
+      "Sensory exploration",
+      "Simple experiments and observations",
+      "Nature study and environmental awareness",
+      "Weather tracking and seasonal changes",
+      "Animal and plant life cycles"
+    ]
+  },
+  {
+    id: "social",
+    title: "Social-Emotional Learning",
+    description: "Activities and practices that help children understand their emotions, develop empathy, and build positive relationships with others.",
+    image: "https://images.pexels.com/photos/8466928/pexels-photo-8466928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: [
+      "Friendship skills and collaboration",
+      "Emotional literacy and regulation",
+      "Problem-solving and conflict resolution",
+      "Self-awareness activities",
+      "Community building and inclusivity"
+    ]
+  },
+  {
+    id: "language",
+    title: "Language Development",
+    description: "For our bilingual program, activities that support both Spanish and English language development through immersive experiences.",
+    image: "https://images.pexels.com/photos/8535239/pexels-photo-8535239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    details: [
+      "Bilingual storytime",
+      "Vocabulary-building games",
+      "Cultural celebrations and traditions",
+      "Conversational practice",
+      "Songs and rhymes in multiple languages"
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Activities" 
+  description="Discover the engaging learning activities offered at Virgen de Loreto Nursery School."
+>
+  <Hero 
+    title="Our Activities"
+    subtitle="Engaging, age-appropriate experiences that support whole-child development"
+    image="https://images.pexels.com/photos/8523336/pexels-photo-8523336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    imageAlt="Children engaged in creative activities"
+    height="medium"
+  />
+
+  <!-- Activities Introduction -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <p class="text-lg">
+          At Virgen de Loreto, we believe that children learn best through play and hands-on experiences. Our curriculum includes a wide range of activities designed to nurture all aspects of development while making learning joyful and engaging.
+        </p>
+      </div>
+
+      <!-- Activity Navigation -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        {activities.map(activity => (
+          <a 
+            href={`#${activity.id}`} 
+            class="px-4 py-2 bg-primary-100 hover:bg-primary-200 text-primary-800 rounded-full transition-colors"
+          >
+            {activity.title}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Activity Details -->
+  {activities.map((activity, index) => (
+    <section id={activity.id} class={`py-16 ${index % 2 === 0 ? 'bg-primary-50' : 'bg-white'}`}>
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class={`${index % 2 === 1 ? 'order-2 lg:order-1' : ''}`}>
+            <img 
+              src={activity.image} 
+              alt={activity.title} 
+              class="rounded-lg shadow-lg h-80 w-full object-cover"
+            />
+          </div>
+          
+          <div class={`${index % 2 === 1 ? 'order-1 lg:order-2' : ''}`}>
+            <div class="section-heading text-left">
+              <h2>{activity.title}</h2>
+            </div>
+            <p class="text-lg mb-6">{activity.description}</p>
+            
+            <h3 class="text-xl font-semibold mb-4">What We Do:</h3>
+            <ul class="space-y-3">
+              {activity.details.map(detail => (
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-secondary-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{detail}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Age-Appropriate Approach -->
+  <section class="py-16 bg-secondary-50">
+    <div class="container-custom">
+      <div class="section-heading">
+        <h2>Age-Appropriate Approach</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Infants -->
+        <div class="paper-bg p-6 rounded-lg shadow-md">
+          <div class="h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+            <span class="text-3xl">👶</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Infants (0-1 years)</h3>
+          <p class="mb-4">
+            Sensory-rich experiences that support bonding, motor development, and early language acquisition.
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-primary-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Tummy time and motor exploration</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-primary-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Sensory baskets and texture play</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-primary-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Music, songs, and gentle movement</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Toddlers -->
+        <div class="paper-bg p-6 rounded-lg shadow-md">
+          <div class="h-16 w-16 bg-secondary-100 rounded-full flex items-center justify-center mb-4">
+            <span class="text-3xl">🧒</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Toddlers (1-3 years)</h3>
+          <p class="mb-4">
+            Activities that support increasing independence, language development, and social awareness.
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-secondary-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Simple art experiences</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-secondary-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Sensory and water play</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-secondary-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Beginning social play activities</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Preschoolers -->
+        <div class="paper-bg p-6 rounded-lg shadow-md">
+          <div class="h-16 w-16 bg-accent-100 rounded-full flex items-center justify-center mb-4">
+            <span class="text-3xl">👧</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Preschoolers (3-6 years)</h3>
+          <p class="mb-4">
+            More complex activities that build school readiness skills while nurturing creativity and critical thinking.
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-accent-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Project-based learning experiences</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-accent-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Early literacy and numeracy activities</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-accent-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Complex social play and group activities</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Programs -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="section-heading">
+        <h2>Special Programs</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Program 1 -->
+        <div class="paper-bg p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3 flex items-center">
+            <span class="text-2xl mr-2">🌍</span>
+            <span>Bilingual Education</span>
+          </h3>
+          <p class="mb-4">
+            Our optional bilingual program introduces Spanish and English in a natural, immersive way. Children learn through songs, stories, and daily routines in both languages.
+          </p>
+          <img 
+            src="https://images.pexels.com/photos/8535239/pexels-photo-8535239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Children in bilingual session" 
+            class="w-full h-48 object-cover rounded-lg"
+          />
+        </div>
+        
+        <!-- Program 2 -->
+        <div class="paper-bg p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3 flex items-center">
+            <span class="text-2xl mr-2">🌱</span>
+            <span>Environmental Education</span>
+          </h3>
+          <p class="mb-4">
+            Through our garden program and nature-based activities, children develop an appreciation for the environment and learn about sustainability in age-appropriate ways.
+          </p>
+          <img 
+            src="https://images.pexels.com/photos/8535225/pexels-photo-8535225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Children in garden" 
+            class="w-full h-48 object-cover rounded-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly Schedule Example -->
+  <section class="py-16 bg-primary-50">
+    <div class="container-custom">
+      <div class="section-heading">
+        <h2>Sample Weekly Schedule</h2>
+        <p class="text-lg max-w-3xl mx-auto text-center mb-8">
+          While each day brings new adventures, here's an example of how we structure our weeks to provide a balanced curriculum.
+        </p>
+      </div>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full paper-bg shadow-md rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-primary-100">
+              <th class="px-4 py-3 text-left">Time</th>
+              <th class="px-4 py-3 text-left">Monday</th>
+              <th class="px-4 py-3 text-left">Tuesday</th>
+              <th class="px-4 py-3 text-left">Wednesday</th>
+              <th class="px-4 py-3 text-left">Thursday</th>
+              <th class="px-4 py-3 text-left">Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="px-4 py-3 font-medium">9:00-9:30</td>
+              <td class="px-4 py-3">Morning Circle</td>
+              <td class="px-4 py-3">Morning Circle</td>
+              <td class="px-4 py-3">Morning Circle</td>
+              <td class="px-4 py-3">Morning Circle</td>
+              <td class="px-4 py-3">Morning Circle</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-4 py-3 font-medium">9:30-10:30</td>
+              <td class="px-4 py-3">Art Studio</td>
+              <td class="px-4 py-3">Science Discovery</td>
+              <td class="px-4 py-3">Language & Literacy</td>
+              <td class="px-4 py-3">Math Exploration</td>
+              <td class="px-4 py-3">Special Project</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-4 py-3 font-medium">10:30-11:00</td>
+              <td class="px-4 py-3">Snack Time</td>
+              <td class="px-4 py-3">Snack Time</td>
+              <td class="px-4 py-3">Snack Time</td>
+              <td class="px-4 py-3">Snack Time</td>
+              <td class="px-4 py-3">Snack Time</td>
+            </tr>
+            <tr class="border-b border-gray-200 bg-gray-50">
+              <td class="px-4 py-3 font-medium">11:00-12:00</td>
+              <td class="px-4 py-3">Outdoor Play</td>
+              <td class="px-4 py-3">Music & Movement</td>
+              <td class="px-4 py-3">Outdoor Play</td>
+              <td class="px-4 py-3">Garden Activities</td>
+              <td class="px-4 py-3">Outdoor Play</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-4 py-3 font-medium">12:00-12:45</td>
+              <td class="px-4 py-3">Lunch</td>
+              <td class="px-4 py-3">Lunch</td>
+              <td class="px-4 py-3">Lunch</td>
+              <td class="px-4 py-3">Lunch</td>
+              <td class="px-4 py-3">Lunch</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-3 font-medium">12:45-2:30</td>
+              <td class="px-4 py-3">Rest/Quiet Time</td>
+              <td class="px-4 py-3">Rest/Quiet Time</td>
+              <td class="px-4 py-3">Rest/Quiet Time</td>
+              <td class="px-4 py-3">Rest/Quiet Time</td>
+              <td class="px-4 py-3">Rest/Quiet Time</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <p class="mt-6 text-center text-gray-600">
+        * This schedule varies by age group and may change to accommodate special activities or events.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-12 bg-accent-500 text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-display text-white mb-6">Want to See Our Activities in Action?</h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8 text-white/90">
+        Schedule a visit to observe our classrooms and see how our curriculum comes to life!
+      </p>
+      <a href="/contact" class="btn bg-white text-accent-600 hover:bg-gray-100">
+        Schedule a Visit
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+
+// Gallery images - using Pexels stock images
+const galleryImages = [
+  {
+    url: "https://images.pexels.com/photos/8613228/pexels-photo-8613228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "School entrance with colorful decorations",
+    category: "Facilities"
+  },
+  {
+    url: "https://images.pexels.com/photos/8613177/pexels-photo-8613177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Classroom environment with learning materials",
+    category: "Facilities"
+  },
+  {
+    url: "https://images.pexels.com/photos/8612927/pexels-photo-8612927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Children engaged in art activities",
+    category: "Art & Crafts"
+  },
+  {
+    url: "https://images.pexels.com/photos/8612929/pexels-photo-8612929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Children painting with watercolors",
+    category: "Art & Crafts"
+  },
+  {
+    url: "https://images.pexels.com/photos/8535214/pexels-photo-8535214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Storytime session with teacher reading to children",
+    category: "Literacy"
+  },
+  {
+    url: "https://images.pexels.com/photos/8535230/pexels-photo-8535230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Children playing musical instruments",
+    category: "Music"
+  },
+  {
+    url: "https://images.pexels.com/photos/296301/pexels-photo-296301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Children playing in outdoor playground",
+    category: "Outdoor"
+  },
+  {
+    url: "https://images.pexels.com/photos/8535225/pexels-photo-8535225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Children gardening and planting seeds",
+    category: "Outdoor"
+  },
+  {
+    url: "https://images.pexels.com/photos/8535220/pexels-photo-8535220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Math activity with counting blocks",
+    category: "Learning"
+  },
+  {
+    url: "https://images.pexels.com/photos/8535227/pexels-photo-8535227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Science experiment with teacher and children",
+    category: "Learning"
+  },
+  {
+    url: "https://images.pexels.com/photos/8466928/pexels-photo-8466928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Children collaborating on a project",
+    category: "Social"
+  },
+  {
+    url: "https://images.pexels.com/photos/8523336/pexels-photo-8523336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Creative play with building blocks",
+    category: "Learning"
+  },
+  {
+    url: "https://images.pexels.com/photos/8535239/pexels-photo-8535239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Language development activity",
+    category: "Literacy"
+  },
+  {
+    url: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Collaborative classroom learning",
+    category: "Learning"
+  },
+  {
+    url: "https://images.pexels.com/photos/8613184/pexels-photo-8613184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Bright, colorful classroom environment",
+    category: "Facilities"
+  },
+  {
+    url: "https://images.pexels.com/photos/8612948/pexels-photo-8612948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    alt: "Outdoor playground with equipment",
+    category: "Facilities"
+  }
+];
+---
+
+<Layout 
+  title="Gallery" 
+  description="View our gallery of images showcasing Virgen de Loreto Nursery School facilities, activities, and happy moments."
+>
+  <Hero 
+    title="Our Gallery"
+    subtitle="A glimpse into our facilities and daily activities"
+    image="https://images.pexels.com/photos/8612929/pexels-photo-8612929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    imageAlt="Children engaged in art activities"
+    height="medium"
+  />
+
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <p class="text-lg">
+          Browse through our photo gallery to see our spaces, activities, and special moments. These images capture the joy, learning, and growth that happen every day at Virgen de Loreto.
+        </p>
+      </div>
+      
+      <GalleryGrid images={galleryImages} />
+    </div>
+  </section>
+
+  <!-- Videos Section (Optional) -->
+  <section class="py-16 bg-primary-50">
+    <div class="container-custom">
+      <div class="section-heading">
+        <h2>Featured Videos</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="paper-bg p-4 rounded-lg shadow-md">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded mb-4">
+            <div class="flex items-center justify-center h-full">
+              <p class="text-gray-600">Video content would be embedded here</p>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Virtual Tour</h3>
+          <p>Take a guided tour through our facilities and classrooms to see where your child will learn and play.</p>
+        </div>
+        
+        <div class="paper-bg p-4 rounded-lg shadow-md">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded mb-4">
+            <div class="flex items-center justify-center h-full">
+              <p class="text-gray-600">Video content would be embedded here</p>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Annual Arts Festival</h3>
+          <p>Highlights from our yearly celebration of creativity, featuring performances and artwork by our students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-12 bg-secondary-800 text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-display text-white mb-6">Experience Virgen de Loreto in Person</h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8 text-secondary-100">
+        Photos can only show so much. Schedule a visit to experience the warm, nurturing environment we've created for your child.
+      </p>
+      <a href="/contact" class="btn bg-white text-secondary-800 hover:bg-gray-100">
+        Schedule a Visit
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,24 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  image: string;
+  alt: string;
+}
+
+const { title, description, icon, image, alt } = Astro.props;
+---
+
+<div class="paper-bg overflow-hidden group transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+  <div class="relative overflow-hidden h-48">
+    <img src={image} alt={alt} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-md">
+      <span class="text-2xl" aria-hidden="true">{icon}</span>
+    </div>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-semibold mb-2">{title}</h3>
+    <p class="text-gray-600">{description}</p>
+  </div>
+</div>
