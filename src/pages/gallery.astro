@@ -3,100 +3,135 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import GalleryGrid from '../components/GalleryGrid.astro';
 
-// Gallery images - using Pexels stock images
+// Gallery images - using local images from /images folder
 const galleryImages = [
   {
-    url: "https://images.pexels.com/photos/8613228/pexels-photo-8613228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "School entrance with colorful decorations",
-    category: "Facilities"
+    url: "/images/Captura de pantalla (3).png",
+    alt: "Área de juegos de la escuela infantil",
+    category: "Instalaciones"
   },
   {
-    url: "https://images.pexels.com/photos/8613177/pexels-photo-8613177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Classroom environment with learning materials",
-    category: "Facilities"
+    url: "/images/Captura de pantalla (4).png",
+    alt: "Salón de clases con materiales educativos",
+    category: "Instalaciones"
   },
   {
-    url: "https://images.pexels.com/photos/8612927/pexels-photo-8612927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children engaged in art activities",
-    category: "Art & Crafts"
+    url: "/images/Captura de pantalla (5).png",
+    alt: "Niños participando en actividades artísticas",
+    category: "Arte y Manualidades"
   },
   {
-    url: "https://images.pexels.com/photos/8612929/pexels-photo-8612929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children painting with watercolors",
-    category: "Art & Crafts"
+    url: "/images/Captura de pantalla (6).png",
+    alt: "Actividades de desarrollo motriz",
+    category: "Aprendizaje"
   },
   {
-    url: "https://images.pexels.com/photos/8535214/pexels-photo-8535214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Storytime session with teacher reading to children",
-    category: "Literacy"
+    url: "/images/Captura de pantalla (7).png",
+    alt: "Sesión de cuentacuentos con los niños",
+    category: "Alfabetización"
   },
   {
-    url: "https://images.pexels.com/photos/8535230/pexels-photo-8535230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children playing musical instruments",
-    category: "Music"
+    url: "/images/Captura de pantalla (8).png",
+    alt: "Niños jugando con instrumentos musicales",
+    category: "Música"
   },
   {
-    url: "https://images.pexels.com/photos/296301/pexels-photo-296301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children playing in outdoor playground",
-    category: "Outdoor"
+    url: "/images/WhatsApp Image 2025-05-15 at 19.48.27 (1).jpeg",
+    alt: "Niños jugando al aire libre",
+    category: "Exteriores"
   },
   {
-    url: "https://images.pexels.com/photos/8535225/pexels-photo-8535225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children gardening and planting seeds",
-    category: "Outdoor"
+    url: "/images/WhatsApp Image 2025-05-15 at 19.48.27 (2).jpeg",
+    alt: "Actividades de jardinería y siembra",
+    category: "Exteriores"
   },
   {
-    url: "https://images.pexels.com/photos/8535220/pexels-photo-8535220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Math activity with counting blocks",
-    category: "Learning"
+    url: "/images/WhatsApp Image 2025-05-15 at 19.48.49 (1).jpeg",
+    alt: "Actividad matemática con bloques",
+    category: "Aprendizaje"
   },
   {
-    url: "https://images.pexels.com/photos/8535227/pexels-photo-8535227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Science experiment with teacher and children",
-    category: "Learning"
+    url: "/images/WhatsApp Image 2025-05-15 at 19.48.49 (2).jpeg",
+    alt: "Experimento científico con profesores y niños",
+    category: "Aprendizaje"
   },
   {
-    url: "https://images.pexels.com/photos/8466928/pexels-photo-8466928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children collaborating on a project",
+    url: "/images/WhatsApp Image 2025-05-15 at 19.48.49 (3).jpeg",
+    alt: "Niños colaborando en un proyecto",
     category: "Social"
   },
   {
-    url: "https://images.pexels.com/photos/8523336/pexels-photo-8523336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Creative play with building blocks",
-    category: "Learning"
+    url: "/images/WhatsApp Image 2025-05-15 at 19.48.49 (4).jpeg",
+    alt: "Juego creativo con bloques de construcción",
+    category: "Aprendizaje"
   },
   {
-    url: "https://images.pexels.com/photos/8535239/pexels-photo-8535239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Language development activity",
-    category: "Literacy"
+    url: "/images/WhatsApp Image 2025-05-15 at 19.48.49 (5).jpeg",
+    alt: "Actividad de desarrollo del lenguaje",
+    category: "Alfabetización"
   },
   {
-    url: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Collaborative classroom learning",
-    category: "Learning"
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.18 (1).jpeg",
+    alt: "Aprendizaje colaborativo en el aula",
+    category: "Aprendizaje"
   },
   {
-    url: "https://images.pexels.com/photos/8613184/pexels-photo-8613184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Bright, colorful classroom environment",
-    category: "Facilities"
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.18 (2).jpeg",
+    alt: "Entorno de aula brillante y colorido",
+    category: "Instalaciones"
   },
   {
-    url: "https://images.pexels.com/photos/8612948/pexels-photo-8612948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Outdoor playground with equipment",
-    category: "Facilities"
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.18 (3).jpeg",
+    alt: "Patio de juegos con equipamiento",
+    category: "Instalaciones"
+  },
+  {
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.18 (4).jpeg",
+    alt: "Niños explorando recursos educativos",
+    category: "Aprendizaje"
+  },
+  {
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.20.jpeg",
+    alt: "Actividades grupales de desarrollo social",
+    category: "Social"
+  },
+  {
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.21.jpeg",
+    alt: "Creatividad y expresión artística",
+    category: "Arte y Manualidades"
+  },
+  {
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.22 (1).jpeg",
+    alt: "Entorno de aprendizaje interactivo",
+    category: "Aprendizaje"
+  },
+  {
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.22 (2).jpeg",
+    alt: "Espacio de lectura y descubrimiento",
+    category: "Alfabetización"
+  },
+  {
+    url: "/images/WhatsApp Image 2025-05-15 at 20.25.23.jpeg",
+    alt: "Área de juegos exterior",
+    category: "Exteriores"
+  },
+  {
+    url: "/images/ninosinicio.jpg",
+    alt: "Niños disfrutando de actividades iniciales",
+    category: "Social"
   }
 ];
 ---
 
 <Layout 
-  title="Gallery" 
-  description="View our gallery of images showcasing Virgen de Loreto Nursery School facilities, activities, and happy moments."
+  title="Galería" 
+  description="Explora nuestra galería de imágenes mostrando las instalaciones, actividades y momentos felices en la Escuela Infantil Virgen de Loreto."
 >
   <Hero 
-    title="Our Gallery"
-    subtitle="A glimpse into our facilities and daily activities"
-    image="https://images.pexels.com/photos/8612929/pexels-photo-8612929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    imageAlt="Children engaged in art activities"
+    title="Nuestra Galería"
+    subtitle="Un vistazo a nuestras instalaciones y actividades diarias"
+    image="/images/ninosinicio.jpg"
+    imageAlt="Niños disfrutando de actividades en nuestra escuela"
     height="medium"
   />
 
@@ -104,7 +139,7 @@ const galleryImages = [
     <div class="container-custom">
       <div class="max-w-3xl mx-auto text-center mb-12">
         <p class="text-lg">
-          Browse through our photo gallery to see our spaces, activities, and special moments. These images capture the joy, learning, and growth that happen every day at Virgen de Loreto.
+          Navega por nuestra galería de fotos para ver nuestros espacios, actividades y momentos especiales. Estas imágenes capturan la alegría, el aprendizaje y el crecimiento que ocurren todos los días en Virgen de Loreto.
         </p>
       </div>
       
@@ -112,46 +147,17 @@ const galleryImages = [
     </div>
   </section>
 
-  <!-- Videos Section (Optional) -->
-  <section class="py-16 bg-primary-50">
-    <div class="container-custom">
-      <div class="section-heading">
-        <h2>Featured Videos</h2>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="paper-bg p-4 rounded-lg shadow-md">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded mb-4">
-            <div class="flex items-center justify-center h-full">
-              <p class="text-gray-600">Video content would be embedded here</p>
-            </div>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Virtual Tour</h3>
-          <p>Take a guided tour through our facilities and classrooms to see where your child will learn and play.</p>
-        </div>
-        
-        <div class="paper-bg p-4 rounded-lg shadow-md">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded mb-4">
-            <div class="flex items-center justify-center h-full">
-              <p class="text-gray-600">Video content would be embedded here</p>
-            </div>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Annual Arts Festival</h3>
-          <p>Highlights from our yearly celebration of creativity, featuring performances and artwork by our students.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- CTA Section -->
   <section class="py-12 bg-secondary-800 text-white">
     <div class="container-custom text-center">
-      <h2 class="text-3xl font-display text-white mb-6">Experience Virgen de Loreto in Person</h2>
+      <h2 class="text-3xl font-display text-white mb-6">Experimenta Virgen de Loreto en Persona</h2>
       <p class="text-xl max-w-2xl mx-auto mb-8 text-secondary-100">
-        Photos can only show so much. Schedule a visit to experience the warm, nurturing environment we've created for your child.
+        Las fotos solo pueden mostrar hasta cierto punto. Programa una visita para experimentar el cálido y acogedor entorno que hemos creado para tu hijo.
       </p>
       <a href="/contact" class="btn bg-white text-secondary-800 hover:bg-gray-100">
-        Schedule a Visit
+        Programar una Visita
       </a>
     </div>
   </section>

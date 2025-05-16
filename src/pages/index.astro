@@ -6,61 +6,61 @@ import TestimonialCard from '../components/TestimonialCard.astro';
 
 const activities = [
   {
-    title: "Art & Crafts",
-    description: "Creative expression through painting, drawing, and crafting with various materials.",
+    title: "Arte y Manualidades",
+    description: "Expresión creativa a través de la pintura, el dibujo y la creación con diversos materiales.",
     icon: "🎨",
     image: "https://images.pexels.com/photos/8612929/pexels-photo-8612929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children doing arts and crafts"
+    alt: "Niños haciendo manualidades"
   },
   {
-    title: "Early Literacy",
-    description: "Building language skills through storytelling, songs, and interactive play.",
+    title: "Alfabetización Temprana",
+    description: "Desarrollo de habilidades lingüísticas a través de cuentos, canciones y juegos interactivos.",
     icon: "📚",
     image: "https://images.pexels.com/photos/8535214/pexels-photo-8535214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children reading books together"
+    alt: "Niños leyendo libros juntos"
   },
   {
-    title: "Music & Movement",
-    description: "Developing coordination and rhythm through dance, instruments, and musical games.",
+    title: "Música y Movimiento",
+    description: "Desarrollo de la coordinación y el ritmo a través de la danza, instrumentos y juegos musicales.",
     icon: "🎵",
     image: "https://images.pexels.com/photos/8535230/pexels-photo-8535230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children playing with musical instruments"
+    alt: "Niños tocando instrumentos musicales"
   },
   {
-    title: "Outdoor Play",
-    description: "Exploring nature and developing motor skills in our safe outdoor playground.",
+    title: "Juegos al Aire Libre",
+    description: "Exploración de la naturaleza y desarrollo de habilidades motoras en nuestro seguro patio de juegos.",
     icon: "🌳",
     image: "https://images.pexels.com/photos/296301/pexels-photo-296301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    alt: "Children playing outdoors"
+    alt: "Niños jugando al aire libre"
   }
 ];
 
 const testimonials = [
   {
-    quote: "Virgen de Loreto has been an amazing experience for my daughter. The teachers are caring and the curriculum is engaging. She looks forward to school every day!",
-    name: "Maria Garcia",
-    role: "Parent of Lucia, 4 years"
+    quote: "La Escuela Infantil Virgen de Loreto ha sido una experiencia increíble para mi hija. Los profesores son cariñosos y el programa educativo es atractivo. ¡Ella espera con ilusión ir a la escuela cada día!",
+    name: "María García",
+    role: "Madre de Lucía, 4 años"
   },
   {
-    quote: "We've been impressed with how much our son has learned in just a few months. The staff truly care about each child's development.",
-    name: "Antonio Fernandez",
-    role: "Parent of Carlos, 3 years"
+    quote: "Estamos impresionados con lo mucho que ha aprendido nuestro hijo en solo unos meses. El personal realmente se preocupa por el desarrollo de cada niño.",
+    name: "Antonio Fernández",
+    role: "Padre de Carlos, 3 años"
   },
   {
-    quote: "The holistic approach to education at this nursery is exceptional. My child has grown socially, emotionally and intellectually.",
-    name: "Isabel Martinez",
-    role: "Parent of Sofia, 5 years"
+    quote: "El enfoque holístico de la educación en esta guardería es excepcional. Mi hija ha crecido social, emocional e intelectualmente.",
+    name: "Isabel Martínez",
+    role: "Madre de Sofía, 5 años"
   }
 ];
 ---
 
 <Layout title="Bienvenidos a la Escuela Infantil Virgen de Loreto">
   <Hero 
-    title="Donde el aprenidzaje comienza con amor"
+    title="Donde el aprendizaje comienza con amor"
     subtitle="Un entorno enriquecedor para la educación temprana de su hijo"
-    image="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    imageAlt="Children playing in classroom"
-    buttonText="Enroll Today"
+    image="images/ninosinicio.jpg"
+    imageAlt="Niños jugando en el aula"
+    buttonText="Matricúlate Hoy"
     buttonLink="/contact"
   />
 
@@ -73,7 +73,7 @@ const testimonials = [
           <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-primary-200 rounded-full z-0"></div>
           <img 
             src="https://images.pexels.com/photos/8613177/pexels-photo-8613177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-            alt="Children in classroom" 
+            alt="Niños en el aula" 
             class="rounded-lg shadow-xl relative z-10"
           />
         </div>
@@ -86,12 +86,12 @@ const testimonials = [
             Esta escuela infantil fue inaugurada el 26 de junio del 2000. Está situada en el barrio del Zaidín y cuenta con una capacidad de 121 niños de entre 0-3 años. Contamos con 1 grupo de bebés, 4 grupos de 1-2 años y 5 de 2-3 años.Esta escuela infantil ofrece a los niños y niñas un ambiente acogedor y tranquilo donde niños y niñas de 0 a 3 años pueden aprender, jugar, y crecer. Nuestra filosofía educativa combina los valores tradicionales con métodos de enseñanza modernos.
           </p>
           <p class="text-lg mb-6">
-            Creemos que cada niño es único y merece una atención personalizada siempre adaptándonos a sus ritmos y  necesidades. El personal de la escuela infantil se dedica a apoyar el desarrollo del niño en todas sus áreas: cognitiva, social, emocional y física.
+            Creemos que cada niño es único y merece una atención personalizada siempre adaptándonos a sus ritmos y necesidades. El personal de la escuela infantil se dedica a apoyar el desarrollo del niño en todas sus áreas: cognitiva, social, emocional y física.
 Siempre ofrecemos un ambiente de cariño, acogedor y significativo. 
 
           </p>
           <a href="/about" class="btn btn-primary">
-            Learn More About Us
+            Conócenos Mejor
           </a>
         </div>
       </div>
@@ -102,9 +102,9 @@ Siempre ofrecemos un ambiente de cariño, acogedor y significativo.
   <section class="py-16 bg-primary-50">
     <div class="container-custom">
       <div class="section-heading">
-        <h2>Our Activities</h2>
+        <h2>Nuestras Actividades</h2>
         <p class="text-lg max-w-3xl mx-auto text-center mb-12">
-          We offer a rich variety of age-appropriate activities designed to stimulate learning and development through play.
+          Ofrecemos una rica variedad de actividades adecuadas a cada edad, diseñadas para estimular el aprendizaje y el desarrollo a través del juego.
         </p>
       </div>
       
@@ -116,7 +116,7 @@ Siempre ofrecemos un ambiente de cariño, acogedor y significativo.
       
       <div class="text-center mt-12">
         <a href="/activities" class="btn btn-secondary">
-          View All Activities
+          Ver Todas las Actividades
         </a>
       </div>
     </div>
@@ -126,7 +126,7 @@ Siempre ofrecemos un ambiente de cariño, acogedor y significativo.
   <section class="py-16 bg-white">
     <div class="container-custom">
       <div class="section-heading">
-        <h2>Why Choose Virgen de Loreto</h2>
+        <h2>Por Qué Elegir Virgen de Loreto</h2>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -136,8 +136,8 @@ Siempre ofrecemos un ambiente de cariño, acogedor y significativo.
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-3">Safe Environment</h3>
-          <p>Our facilities are designed with safety as the top priority, with secure play areas and vigilant supervision.</p>
+          <h3 class="text-xl font-semibold mb-3">Entorno Seguro</h3>
+          <p>Nuestras instalaciones están diseñadas con la seguridad como máxima prioridad, con áreas de juego seguras y supervisión constante.</p>
         </div>
         
         <div class="text-center paper-bg p-6 transition-transform hover:-translate-y-1">
@@ -146,8 +146,8 @@ Siempre ofrecemos un ambiente de cariño, acogedor y significativo.
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-3">Qualified Teachers</h3>
-          <p>Our educators are certified in early childhood education and receive ongoing professional development.</p>
+          <h3 class="text-xl font-semibold mb-3">Profesores Cualificados</h3>
+          <p>Nuestros educadores están certificados en educación infantil y reciben formación profesional continua.</p>
         </div>
         
         <div class="text-center paper-bg p-6 transition-transform hover:-translate-y-1">
@@ -156,8 +156,8 @@ Siempre ofrecemos un ambiente de cariño, acogedor y significativo.
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-3">Communication</h3>
-          <p>We maintain open lines of communication with parents through regular updates and meetings.</p>
+          <h3 class="text-xl font-semibold mb-3">Comunicación</h3>
+          <p>Mantenemos líneas de comunicación abiertas con los padres a través de actualizaciones periódicas y reuniones.</p>
         </div>
       </div>
     </div>
@@ -167,7 +167,7 @@ Siempre ofrecemos un ambiente de cariño, acogedor y significativo.
   <section class="py-16 bg-secondary-50">
     <div class="container-custom">
       <div class="section-heading">
-        <h2>What Parents Say</h2>
+        <h2>Lo Que Dicen Los Padres</h2>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -181,16 +181,16 @@ Siempre ofrecemos un ambiente de cariño, acogedor y significativo.
   <!-- CTA Section -->
   <section class="py-16 bg-primary-800 text-white">
     <div class="container-custom text-center">
-      <h2 class="text-3xl md:text-4xl font-display text-white mb-6">Ready to Start Your Child's Journey?</h2>
+      <h2 class="text-3xl md:text-4xl font-display text-white mb-6">¿Listo para comenzar el viaje de tu hijo?</h2>
       <p class="text-xl max-w-2xl mx-auto mb-8 text-primary-100">
-        Enrollments for the next school year are now open. Contact us to schedule a visit and learn more about our programs.
+        Las inscripciones para el próximo curso escolar ya están abiertas. Contáctanos para programar una visita y conocer más sobre nuestros programas.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="/contact" class="btn bg-white text-primary-800 hover:bg-gray-100">
-          Enroll Now
+          Matricúlate Ahora
         </a>
         <a href="/about" class="btn border-2 border-white text-white hover:bg-white/10">
-          Learn More
+          Saber Más
         </a>
       </div>
     </div>
