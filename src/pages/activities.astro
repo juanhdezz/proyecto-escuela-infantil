@@ -5,107 +5,200 @@ import Hero from '../components/Hero.astro';
 // Activity data
 const activities = [
   {
-    id: "art",
-    title: "Arte y Manualidades",
-    description: "La expresión creativa a través de diversos medios ayuda a los niños a desarrollar habilidades motoras finas, explorar su imaginación y aprender sobre diferentes materiales y técnicas.",
-    image: "https://images.pexels.com/photos/8612929/pexels-photo-8612929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: "forest-animals",
+    title: "El Bosque de los Animales",
+    description: "Una actividad que se realiza al inicio del proyecto para que los niños y niñas se conozcan, jueguen entre ellos y se creen vínculos de afecto y cariño imitando gestos de animales del bosque.",
+    image: "/images/a1.jpeg",
     details: [
-      "Pintura con varias herramientas y técnicas",
-      "Modelado con arcilla y escultura",
-      "Collage y manualidades de papel",
-      "Dibujo e ilustración",
-      "Proyectos artísticos estacionales y culturales"
+      "Identificar el nombre de los diferentes animales",
+      "Fomentar el conocimiento mutuo entre los niños y niñas",
+      "Desarrollar la capacidad de imitación",
+      "Favorecer el cariño y los vínculos afectivos"
     ]
   },
   {
-    id: "literacy",
-    title: "Alfabetización Temprana",
-    description: "Construyendo una base sólida en lenguaje y alfabetización a través de actividades atractivas que hacen del aprendizaje de la lectura y la escritura una experiencia alegre.",
-    image: "https://images.pexels.com/photos/8535214/pexels-photo-8535214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: "treasure-hunt",
+    title: "Jugamos y Buscamos el Tesoro Escondido",
+    description: "Los niños y niñas son piratas y tienen una misión muy importante: buscar su tesoro escondido en la bandeja de gelatina y descubrir qué hay debajo de él.",
+    image: "/images/a2.jpeg",
     details: [
-      "Hora del cuento y lecturas en voz alta",
-      "Reconocimiento del alfabeto y fonética",
-      "Narración dramática y espectáculos de títeres",
-      "Experiencias tempranas de escritura",
-      "Exploración de entornos ricos en material impreso"
+      "Identificar y buscar el tesoro escondido",
+      "Estimular la curiosidad y el interés",
+      "Fomentar la coordinación de las manos",
+      "Manipular la gelatina"
     ]
   },
   {
-    id: "music",
-    title: "Música y Movimiento",
-    description: "Actividades de ritmo, melodía y movimiento que desarrollan la coordinación, las habilidades auditivas y la autoexpresión mientras fomentan el amor por la música.",
-    image: "https://images.pexels.com/photos/8535230/pexels-photo-8535230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: "games-paradise",
+    title: "El Paraíso de los Juegos",
+    description: "Jugarán a una gymkana muy divertida con 5 zonas de juegos donde los niños y niñas realizarán cada juego con sus instrucciones correspondientes. Al finalizar se les entregará una pegatina de héroes y una medalla por haber sido grandes jugadores y jugadoras.",
+    image: "/images/a3.jpeg",
     details: [
-      "Canto y juego vocal",
-      "Exploración de instrumentos",
-      "Danza y movimiento creativo",
-      "Juegos rítmicos y actividades",
-      "Narración musical"
+      "Jugar a encajar y trasvasar con cubos, cajas, cucharones, garbanzos, arroz y espaguetis",
+      "Lavar la ropa de los muñecos del aula y tenderla al sol para aprender cómo se lava la ropa",
+      "Pintar con esponjas, tapones y con las manos en un gran papel continuo",
+      "Disfrazarse de piratas, médicos, princesas y bailar al ritmo de la música con cascabeles, maracas y panderetas"
     ]
   },
   {
-    id: "outdoor",
-    title: "Juego al Aire Libre",
-    description: "El tiempo en nuestros espacios exteriores permite a los niños conectarse con la naturaleza, desarrollar habilidades motoras gruesas y participar en juegos colaborativos en un entorno diferente.",
-    image: "https://images.pexels.com/photos/296301/pexels-photo-296301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: "sea-animals",
+    title: "Pintamos los Animales del Mar",
+    description: "Exploramos los animales que hay debajo del mar con nuestra súper pecera y los pintaremos con pinturas de neón, decorando todo lo que se encuentra en ella.",
+    image: "/images/a4.jpeg",
     details: [
-      "Exploración de la naturaleza y jardinería",
-      "Actividades con equipos de patio de juegos",
-      "Juegos con pelotas y ejercicios de coordinación",
-      "Arte y ciencia al aire libre",
-      "Experiencias estacionales al aire libre"
+      "Conocer los elementos del mar",
+      "Reforzar los colores",
+      "Favorecer la exploración sensorial",
+      "Estimular el juego simbólico"
     ]
   },
   {
-    id: "math",
-    title: "Matemáticas Tempranas",
-    description: "Actividades prácticas que desarrollan el sentido numérico, el reconocimiento de patrones, habilidades de medición y pensamiento lógico en contextos significativos.",
-    image: "https://images.pexels.com/photos/8535220/pexels-photo-8535220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: "color-exploration",
+    title: "Exploramos y Manipulamos con los Colores",
+    description: "Estimulamos el juego a través de una provocación donde los niños y niñas explorarán y manipularán el material dispuesto en orden y de forma atractiva, jugando de forma libre y por secciones de colores.",
+    image: "/images/a5.jpeg",
     details: [
-      "Conteo y reconocimiento de números",
-      "Clasificación y categorización",
-      "Reconocimiento de formas y geometría",
-      "Actividades de medición",
-      "Creación y reconocimiento de patrones"
+      "Potenciar la exploración y manipulación",
+      "Fomentar la coordinación óculo-manual",
+      "Estimular la atención y concentración",
+      "Favorecer el reconocimiento de los colores y su asociación"
     ]
   },
   {
-    id: "science",
-    title: "Descubrimiento Científico",
-    description: "Actividades basadas en la exploración que nutren la curiosidad natural de los niños sobre el mundo y desarrollan habilidades de pensamiento científico.",
-    image: "https://images.pexels.com/photos/8535227/pexels-photo-8535227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: "color-jumps",
+    title: "Carrera de Saltos de Colores",
+    description: "Saltaremos en un juego súper divertido dentro de un saco del color correspondiente, siguiendo el orden de las pelotas en el suelo. Recogerán las pelotas del color asociado e irán metiéndolas en su saco. Quien más pelotas tenga, batirá el récord.",
+    image: "/images/a6.jpeg",
     details: [
-      "Exploración sensorial",
-      "Experimentos sencillos y observaciones",
-      "Estudio de la naturaleza y conciencia ambiental",
-      "Seguimiento del clima y cambios estacionales",
-      "Ciclos de vida de animales y plantas"
+      "Fomentar el movimiento del cuerpo",
+      "Favorecer el conocimiento de los colores",
+      "Desarrollar la destreza motriz de las manos",
+      "Jugar de forma distinta y divertida"
     ]
   },
   {
-    id: "social",
-    title: "Aprendizaje Socioemocional",
-    description: "Actividades y prácticas que ayudan a los niños a entender sus emociones, desarrollar empatía y construir relaciones positivas con los demás.",
-    image: "https://images.pexels.com/photos/8466928/pexels-photo-8466928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: "games-gymkhana",
+    title: "Gymkana de Juegos",
+    description: "Juega y diviértete con nuestra gymkana, logrando superar cada juego propuesto.",
+    image: "/images/a7.jpeg",
     details: [
-      "Habilidades de amistad y colaboración",
-      "Alfabetización emocional y regulación",
-      "Resolución de problemas y conflictos",
-      "Actividades de autoconciencia",
-      "Construcción de comunidad e inclusividad"
+      "Andar como animales e imitar sus sonidos y movimientos",
+      "Lanzar pelotas dentro de un cubo sin que caigan al suelo",
+      "Pescar el máximo de patitos del agua en 4 minutos",
+      "Atrapar con las manos los globos del aire sin que se caigan",
+      "Jugar a las estatuas al ritmo de la música"
     ]
   },
   {
-    id: "language",
-    title: "Desarrollo del Lenguaje",
-    description: "Para nuestro programa bilingüe, actividades que apoyan el desarrollo tanto del español como del inglés a través de experiencias inmersivas.",
-    image: "https://images.pexels.com/photos/8535239/pexels-photo-8535239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    id: "color-tag",
+    title: "Jugamos al Pilla-Pilla de Colores",
+    description: "Jugamos, aprendemos y estamos atentos a los colores. Es una forma del tradicional pilla-pilla, pero salvándose al tocar el color que se nombra en alto.",
+    image: "/images/a8.jpeg",
     details: [
-      "Hora del cuento bilingüe",
-      "Juegos para ampliar vocabulario",
-      "Celebraciones culturales y tradiciones",
-      "Práctica de conversación",
-      "Canciones y rimas en varios idiomas"
+      "Trabajar en equipo",
+      "Reforzar los colores azul, rojo, amarillo y verde",
+      "Desarrollar la psicomotricidad gruesa",
+      "Comprender y reconocer órdenes sencillas"
+    ]
+  },
+  {
+    id: "heroes-circuit",
+    title: "Súper Circuito de Héroes",
+    description: "Los niños y niñas son héroes y deben lograr superar cada obstáculo del camino. ¡Lo conseguirán y lo pasarán genial!",
+    image: "/images/a9.jpeg",
+    details: [
+      "Obstáculos con picas y conos para saltar y pasar por debajo",
+      "Zigzag botando una pelota o con ella en la mano",
+      "Saltar dentro y fuera de los aros",
+      "Pasar por debajo del túnel gateando",
+      "Hacer una voltereta y tirarse por el tobogán"
+    ]
+  },
+  {
+    id: "team-ball",
+    title: "Jugamos en Equipo a Salvar el Balón",
+    description: "El objetivo es que el balón no se caiga mientras se camina en equipo. Mantendrán el equilibrio sobre las picas sujetando un palo con el balón en medio.",
+    image: "/images/a10.jpeg",
+    details: [
+      "Fomentar el movimiento libre y el equilibrio",
+      "Favorecer el juego en equipo",
+      "Fomentar la atención y concentración",
+      "Potenciar la coordinación y el agarre"
+    ]
+  },
+  {
+    id: "blacklight",
+    title: "Bandeja de Experimentación con Luz Negra",
+    description: "Exploramos y manipulamos con la divertida iluminación de la luz negra. Se podrán tocar botellas, agitar, hacer formas, pintar y experimentar.",
+    image: "/images/a11.jpeg",
+    details: [
+      "Favorecer la exploración sensorial",
+      "Despertar la curiosidad",
+      "Estimular la motricidad fina",
+      "Fomentar la autonomía y la creatividad"
+    ]
+  },
+  {
+    id: "geometric-shapes",
+    title: "Buscamos y Jugamos con las Formas Geométricas",
+    description: "Conocemos las figuras geométricas clasificando y explorando. Busca, asocia y encuentra la pareja correcta de hormigas con tu figura.",
+    image: "/images/a12.jpeg",
+    details: [
+      "Reconocer e identificar formas geométricas",
+      "Favorecer el descubrimiento",
+      "Trabajar la lógica matemática y clasificación",
+      "Desarrollar el movimiento de las manos"
+    ]
+  },
+  {
+    id: "numbers-hands",
+    title: "Trabajamos los Números con las Dos Manos",
+    description: "Con nuestras manos conoceremos los números y su posición en los dedos, pegando pompones para visualizar cuántos se usan al contar.",
+    image: "/images/a13.jpeg",
+    details: [
+      "Trabajar los números",
+      "Desarrollar atención y concentración",
+      "Trabajar el agarre con los dedos",
+      "Facilitar el reconocimiento numérico con las manos",
+      "Potenciar la comprensión numérica"
+    ]
+  },
+  {
+    id: "ice-cream",
+    title: "Jugamos Creando Nuestros Helados Favoritos",
+    description: "Nos convertimos en heladeros y heladeras. ¡Crea tu helado favorito y diviértete!",
+    image: "/images/a14.jpeg",
+    details: [
+      "Favorecer el juego simbólico",
+      "Fomentar el trabajo en grupo",
+      "Estimular el agarre con cucharas, vasos y utensilios",
+      "Potenciar la comunicación verbal y gestual"
+    ]
+  },
+  {
+    id: "planting",
+    title: "Plantamos una Semilla",
+    description: "Nos convertimos en pequeños jardineros, creando, cuidando y decorando nuestra planta.",
+    image: "/images/a15.jpeg",
+    details: [
+      "Conocer la naturaleza y las partes de la planta",
+      "Trabajar el cuidado",
+      "Seguir los pasos del proceso de plantación",
+      "Observar el crecimiento desde la semilla"
+    ]
+  },
+  {
+    id: "water-activity",
+    title: "Actividad del Agua",
+    description: "Fiesta final del verano. Un día especial para compartir en familia y con el centro educativo disfrutando del agua.",
+    image: "/images/a16.jpeg",
+    details: [
+      "Zonas de comida para las familias",
+      "Piscinas con pelotas",
+      "Toboganes y colchonetas antideslizantes",
+      "Pistolas de agua, cubos, palas",
+      "Guerra de globos de agua",
+      "Pasar un gran día en familia y con las educadoras"
     ]
   }
 ];
@@ -118,7 +211,7 @@ const activities = [
   <Hero 
     title="Nuestras Actividades"
     subtitle="Experiencias atractivas y adecuadas a cada edad que apoyan el desarrollo integral del niño"
-    image="https://images.pexels.com/photos/8523336/pexels-photo-8523336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image="/images/fondo_actividades.png"
     imageAlt="Niños participando en actividades creativas"
     height="medium"
   />
@@ -151,11 +244,11 @@ const activities = [
     <section id={activity.id} class={`py-16 ${index % 2 === 0 ? 'bg-primary-50' : 'bg-white'}`}>
       <div class="container-custom">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div class={`${index % 2 === 1 ? 'order-2 lg:order-1' : ''}`}>
+          <div class={`${index % 2 === 1 ? 'order-2 lg:order-1' : ''} flex justify-center`}>
             <img 
               src={activity.image} 
               alt={activity.title} 
-              class="rounded-lg shadow-lg h-80 w-full object-cover"
+              class="rounded-lg shadow-lg h-auto max-h-[500px] object-contain"
             />
           </div>
           

@@ -11,7 +11,7 @@ import ContactForm from '../components/ContactForm.astro';
   <Hero 
     title="Contáctanos"
     subtitle="Estamos aquí para responder tus preguntas y ayudar a tu familia a unirse a nuestra comunidad"
-    image="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image="/images/fondo_contacto.png"
     imageAlt="Edificio escolar con exterior colorido"
     height="medium"
   />
@@ -39,7 +39,8 @@ import ContactForm from '../components/ContactForm.astro';
               </div>
               <div>
                 <h3 class="text-lg font-semibold mb-1">Dirección</h3>
-                <p>Calle Principal 123<br>Madrid, España 28001</p>
+                <p>Plaza Federico Mayo 1<br>Zaidín, Granada 18007
+                </p>
               </div>
             </div>
             
@@ -51,7 +52,8 @@ import ContactForm from '../components/ContactForm.astro';
               </div>
               <div>
                 <h3 class="text-lg font-semibold mb-1">Teléfono</h3>
-                <p>+34 912 345 678</p>
+                <p>+34 958 54 40 30
+                </p>
               </div>
             </div>
             
@@ -62,8 +64,8 @@ import ContactForm from '../components/ContactForm.astro';
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold mb-1">Email</h3>
-                <p>info@virgendloreto.edu</p>
+                <h3 class="text-lg font-semibold mb-1">Correo Electrónico</h3>
+                <p>eivirgendeloreto@.edu</p>
               </div>
             </div>
             
@@ -75,29 +77,12 @@ import ContactForm from '../components/ContactForm.astro';
               </div>
               <div>
                 <h3 class="text-lg font-semibold mb-1">Horario de Oficina</h3>
-                <p>Lunes - Viernes: 8:00 AM - 6:00 PM<br>Sábado: 9:00 AM - 1:00 PM (Con cita previa)<br>Domingo: Cerrado</p>
+                <p>Lunes - Viernes: 10:00 AM - 13:00 PM<br>Sábado y domingo: Cerrado</p>
               </div>
             </div>
           </div>
           
-          <div class="paper-bg p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold mb-4">Curso Escolar 2025-2026</h3>
-            <p class="mb-4">La matrícula para el próximo curso escolar ya está abierta. El espacio es limitado, por lo que animamos a las familias interesadas a contactarnos pronto.</p>
-            <ul class="space-y-2">
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-accent-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Trimestre de Otoño: 2 de septiembre - 20 de diciembre de 2025</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="h-5 w-5 text-accent-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Trimestre de Primavera: 7 de enero - 19 de junio de 2026</span>
-              </li>
-            </ul>
-          </div>
+          
         </div>
         
         <!-- Contact Form -->
@@ -108,51 +93,7 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
 
-  <!-- Map Section -->
-  <section class="py-16 bg-primary-50">
-    <div class="container-custom">
-      <div class="section-heading">
-        <h2>Encuéntranos</h2>
-      </div>
-      
-      <div class="paper-bg p-4 rounded-lg shadow-md">
-        <!-- Map placeholder (in a real project, this would be replaced with an actual map) -->
-        <div class="h-96 bg-gray-200 rounded flex items-center justify-center">
-          <p class="text-gray-600 text-center p-8">
-            Aquí se mostraría un mapa interactivo.<br>
-            En una implementación completa, esto se integraría con Google Maps u otro servicio de mapas.
-          </p>
-        </div>
-      </div>
-      
-      <div class="mt-8 text-center">
-        <p class="text-lg mb-4">
-          Ubicados convenientemente en el centro de Madrid, nuestra escuela es fácilmente accesible en transporte público.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <div class="bg-white py-2 px-4 rounded-full flex items-center shadow-sm">
-            <svg class="h-5 w-5 text-primary-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-            </svg>
-            <span>Metro Línea 2: Estación Nombre</span>
-          </div>
-          <div class="bg-white py-2 px-4 rounded-full flex items-center shadow-sm">
-            <svg class="h-5 w-5 text-secondary-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-            </svg>
-            <span>Rutas de Autobús: 14, 27, 45</span>
-          </div>
-          <div class="bg-white py-2 px-4 rounded-full flex items-center shadow-sm">
-            <svg class="h-5 w-5 text-accent-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-            </svg>
-            <span>Estacionamiento Disponible Cercano</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- FAQ Section -->
   <section class="py-16 bg-white">
