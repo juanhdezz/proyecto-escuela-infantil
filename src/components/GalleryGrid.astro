@@ -2,7 +2,6 @@
 interface Image {
   url: string;
   alt: string;
-  category?: string;
 }
 
 export interface Props {
@@ -10,28 +9,13 @@ export interface Props {
 }
 
 const { images } = Astro.props;
-
-// Categories for filtering (optional)
-const categories = ['All', ...new Set(images.map(img => img.category).filter(Boolean))];
 ---
 
 <div class="gallery">
-  <!-- Filter buttons (optional) -->
-  <div class="flex flex-wrap justify-center gap-2 mb-8">
-    {categories.map(category => (
-      <button 
-        class="px-4 py-2 rounded-full text-sm font-medium transition-colors bg-white border border-gray-200 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 gallery-filter" 
-        data-category={category}
-      >
-        {category}
-      </button>
-    ))}
-  </div>
-
   <!-- Image Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gallery-container">
     {images.map((image, index) => (
-      <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer transition-transform hover:scale-105" data-category={image.category || 'All'}>
+      <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer transition-transform hover:scale-105">
         <img 
           src={image.url} 
           alt={image.alt} 
@@ -52,39 +36,13 @@ const categories = ['All', ...new Set(images.map(img => img.category).filter(Boo
 </div>
 
 <script>
-  // Gallery filtering
-  const filterButtons = document.querySelectorAll('.gallery-filter');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const category = button.getAttribute('data-category');
-      
-      // Update active button
-      filterButtons.forEach(btn => btn.classList.remove('bg-primary-100'));
-      button.classList.add('bg-primary-100');
-      
-      // Filter items
-      if (category === 'All') {
-        galleryItems.forEach(item => item.classList.remove('hidden'));
-      } else {
-        galleryItems.forEach(item => {
-          if (item.getAttribute('data-category') === category) {
-            item.classList.remove('hidden');
-          } else {
-            item.classList.add('hidden');
-          }
-        });
-      }
-    });
-  });
-  
   // Gallery modal
   const modal = document.getElementById('galleryModal');
   const modalImage = document.getElementById('modalImage');
   const closeModal = document.getElementById('closeModal');
   const prevButton = document.getElementById('prevImage');
   const nextButton = document.getElementById('nextImage');
+  const galleryItems = document.querySelectorAll('.gallery-item');
   
   let currentIndex = 0;
   const images = Array.from(galleryItems).map(item => ({
